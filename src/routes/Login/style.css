@@ -1,0 +1,116 @@
+.login {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/login/背景插图@2x.png');
+    background-size: 100% 100%;
+}
+
+.login_form, .register_form {
+    width: 5.93rem;
+    position: relative;
+    left: 9.53rem;
+    top: 2.58rem;
+}
+.register_form{
+    top: 1.5rem;
+}
+.login_form p {
+    text-align: center;
+    font-size: .29rem;
+    margin-bottom: .41rem;
+}
+
+.form_box {
+    border: 1px solid #f1f1f1;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 3px 4px 25px 3px #dcdcdc80;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.linear_color {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: linear-gradient(270deg, rgba(127, 236, 255, 1) 0%, rgba(40, 94, 233, 1) 100%);
+    height: .16rem;
+}
+
+.user_name {
+    width: 4.65rem
+}
+.code{
+    width: 3.96rem;
+    margin-right: .3rem;
+}
+
+.form_box .el-input__inner {
+    font-size: .19rem;
+    height: .53rem;
+}
+
+.form_box .el-input__inner::placeholder {
+    font-size: .15rem;
+}
+
+.login_btn {
+    width: 4.65rem;
+    height: .53rem;
+    line-height: .53rem;
+    margin: .4rem auto .2rem auto;
+    background: rgba(46, 97, 231, 1);
+    border-radius: 5px;
+    font-size: .19rem;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.form_box .el-form {
+    margin-top: .84rem;
+}
+
+.form_box .el-form-item{
+    margin-bottom: .3rem;
+}
+
+.form_box .el-form-item__error {
+    left: .64rem;
+    font-size: .14rem;
+}
+
+.login_form .el-loading-spinner {
+    top: 35%;
+}
+
+.remeber {
+    float: right;
+    margin-right: .64rem;
+    display: flex
+}
+
+.remeber a p {
+    font-size: .15rem;
+    cursor: pointer;
+}
+
+.remeber a:nth-of-type(1) p{
+    color: #919191;
+}
+
+.remeber div {
+    width: .01rem;
+    height: .15rem;
+    margin: 0 .1rem;
+    background: #919191;
+}
+
+.remeber a:nth-of-type(2) p{
+    color: #2E61E7;
+}
+.send_code{
+    font-size: .19rem;
+    color: #2E61E7;
+}
