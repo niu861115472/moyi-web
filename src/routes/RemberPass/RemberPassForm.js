@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 const RemeberPass = () => {
     return (
         <div className="remeber">
-            <Link to="/set_password">
-                <p>忘记密码</p>
+            <Link to="/register">
+                <p>注册</p>
             </Link>
             <div></div>
             <Link to="/">
@@ -64,10 +64,10 @@ function LoginForm(props) {
                 validator: (rule, value, callback) => {
                     if (value === '') {
                         callback(new Error('请再次输入密码'));
-                    } 
+                    }
                     else if (value !== form.pass) {
                         callback(new Error('两次输入密码不一致!'));
-                    } 
+                    }
                     else {
                         callback();
                     }
@@ -148,18 +148,28 @@ function LoginForm(props) {
     return (
 
         <div className="register_form login_form">
-            <p>魔骥注册</p>
+            <p>重置密码</p>
             <Loading loading={fullscreen}>
                 <div className="form_box">
                     <div className="linear_color"></div>
                     <Form ref={register} model={form} rules={rules}>
-                        <Form.Item prop="name">
+                        <Form.Item prop="telephone">
                             <Input
                                 className="user_name"
-                                value={form.name}
-                                placeholder="用户名"
-                                onChange={(value) => onChange('name', value)}
+                                maxLength={11}
+                                value={form.telephone}
+                                placeholder="手机号"
+                                onChange={(value) => onChange('telephone', value)}
                             />
+                        </Form.Item>
+                        <Form.Item prop="code">
+                            <Input
+                                className="code"
+                                value={form.code}
+                                placeholder="验证码"
+                                onChange={(value) => onChange('code', value)}
+                            />
+                            <span onClick={SendCode} className="send_code">{code.text}</span>
                         </Form.Item>
                         <Form.Item prop="pass">
                             <Input
@@ -179,25 +189,7 @@ function LoginForm(props) {
                                 onChange={(value) => onChange('checkPass', value)}
                             />
                         </Form.Item>
-                        <Form.Item prop="telephone">
-                            <Input
-                                className="user_name"
-                                maxLength={11}
-                                value={form.telephone}
-                                placeholder="手机号"
-                                onChange={(value) => onChange('telephone', value)}
-                            />
-                        </Form.Item>
-                        <Form.Item prop="code">
-                            <Input
-                                className="code"
-                                value={form.code}
-                                placeholder="验证码"
-                                onChange={(value) => onChange('code', value)}
-                            />
-                            <span onClick={SendCode} className="send_code">{code.text}</span>
-                        </Form.Item>
-                        <div className="login_btn" onClick={(e) => handleSubmit(e)}>注册</div>
+                        <div className="login_btn" onClick={(e) => handleSubmit(e)}>确定</div>
                     </Form>
                     <RemeberPass />
                 </div>

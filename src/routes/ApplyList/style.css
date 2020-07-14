@@ -1,0 +1,93 @@
+.apply_index{
+    margin: .3rem;
+}
+.apply_index .search{
+    display: flex;
+    justify-content: space-between;
+    padding: .25rem .3rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 4px 4px 12px 2px #e7e5e5;
+}
+.apply_index .search .el-input{
+    width: 2.7rem;
+    font-size: .19rem;
+}
+.apply_index .search .el-input .el-input__inner{
+    height: .45rem;
+}
+.apply_index .search .search_btn{
+    width: .9rem;
+    height: .45rem;
+    line-height: .45rem;
+    background: #285EE9;
+    border-radius: 4px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+.apply_index .apply_list .list_header,
+.apply_index .apply_list .list_item{
+    background: #fbfcff;
+    margin-top: .1rem;
+    padding: .3rem
+}
+.apply_index .apply_list .list_item{
+    box-shadow: 4px 4px 12px 2px #e7e5e5;
+    padding: .15rem .3rem;
+    cursor: pointer;
+}
+.apply_index .apply_list .list_item:hover{
+    background: #f4f6fc;
+}
+.apply_index .apply_list .list_item .el-button--small{
+    font-size: .15rem;
+    padding: .09rem .12rem;
+}
+.apply_index .apply_list .list_header ul,
+.apply_index .apply_list .list_item ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.apply_index .apply_list .list_header ul li,
+.apply_index .apply_list .list_item ul li{
+    width: 2.3rem;
+    text-align: center;
+    margin: 0 auto;
+    text-overflow:ellipsis;
+    overflow: hidden;
+}
+.apply_index .apply_list .list_header ul li:nth-of-type(4),
+.apply_index .apply_list .list_item ul .item{
+    width: 4rem
+}
+.apply_index .apply_list .list_item ul li img{
+    width: .65rem;
+    height: .65rem;
+}
+.apply_index .el-tooltip__popper{
+    font-size: .15rem;
+}
+.apply_index .apply_list .el-pagination{
+    width: 8rem;
+    margin: .4rem auto;
+}
+.apply_index .apply_list .el-pagination .el-pager li,
+.apply_index .apply_list .el-pagination .btn-prev,
+.apply_index .apply_list .el-pagination .btn-next{
+    /* padding: 0 .rem; */
+    min-width:.45rem;
+    height: .42rem;
+    line-height:.42rem;
+    margin: 0 .05rem;
+    font-size: .19rem;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+}
+.apply_index .apply_list .el-pagination .btn-prev,
+.apply_index .apply_list .el-pagination .btn-next{
+    padding: 0 .08rem;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+}

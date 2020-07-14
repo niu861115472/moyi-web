@@ -1,14 +1,14 @@
 import React from 'react';
-import RegisterForm from './RegisterForm'
+import RemberPassForm from './RemberPassForm'
 import '../Login/style.css'
 
-function Register(props){
+function RemberPass(props){
 
     return (
         <div className="register login">
-            <RegisterForm />
+            <RemberPassForm />
         </div>
     )
 }
 
-export default Register
+export default RemberPass

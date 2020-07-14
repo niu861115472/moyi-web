@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Input, Form, Loading } from 'element-react';
-import { Link } from 'react-router-dom'
+import { withRouter, Link } from 'dva/router'
 
 const RemeberPass = () => {
     return (
@@ -17,6 +17,7 @@ const RemeberPass = () => {
 }
 
 function LoginForm(props) {
+    console.log(props)
     const refs = useRef()
     const [form, setForm] = useState({
         name: '',
@@ -53,13 +54,15 @@ function LoginForm(props) {
     function handleSubmit(e) {
         e.preventDefault();
         refs.current.validate((valid) => {
+            console.log(valid)
             if (valid) {
                 clearTimeout(timeout)
                 let timeout = setTimeout(() => {
                     setFull(false)
+                    props.history.push('/client/index/0')
                 }, 3000)
-
                 setFull(true)
+                console.log('submit!!')
             } else {
                 console.log('error submit!!')
                 return false;
@@ -101,4 +104,4 @@ function LoginForm(props) {
     )
 }
 
-export default LoginForm
+export default withRouter(LoginForm)

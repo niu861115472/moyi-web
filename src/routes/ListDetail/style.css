@@ -1,0 +1,87 @@
+.list_detail {
+    margin: .3rem;
+}
+
+.list_detail .detail_header {
+    background: #ffffff;
+    padding: .4rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 13px 0px rgba(220, 220, 220, 0.5);
+}
+
+.list_detail .detail_header .data_statis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list_detail .detail_header .data_statis .left img,
+.icon {
+    position: relative;
+    top: 0.01rem;
+    width: .72rem;
+    height: .72rem;
+    border-radius: 5px;
+}
+
+.list_detail .detail_header .data_statis .left .version {
+    position: relative;
+    display: inline-block;
+    margin-left: .36rem;
+    font-size: .19rem;
+    color: #919191;
+}
+
+.list_detail .detail_header .data_statis .left .version p {
+    margin-bottom: .09rem;
+}
+
+.list_detail .detail_header .data_statis .left .version::before {
+    content: " ";
+    width: .03rem;
+    height: .64rem;
+    background: #E6E6E6;
+    position: absolute;
+    top: 0;
+    left: -0.18rem;
+}
+
+.list_detail .detail_header .data_statis .right {
+    width: 1.33rem;
+    height: .6rem;
+    line-height: .6rem;
+    background: #285ee9;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.list_detail .detail_header .download_table {
+    margin-top: .4rem;
+    border-radius: 5px;
+    border: 1px solid rgba(239, 239, 239, 1);
+}
+.list_detail .detail_header .download_table p{
+    width: 33.3%;
+    text-align: center;
+}
+.list_detail .detail_header .download_table .top,
+.list_detail .detail_header .download_table .bottom{
+    display: flex;
+    justify-content: space-around;
+    height: .72rem;
+    line-height: .72rem;
+    background:#fbfcff;
+    color: #919191;
+}
+.list_detail .detail_header .download_table .bottom{
+    background: #ffffff;
+}
+.list_detail .detail_header .download_table .bottom p{
+    color: #0D1D48;
+    font-weight:500;
+}
+.list_detail .detail_header .download_table .bottom p:nth-of-type(3) a{
+    color: #285EE9;
+}

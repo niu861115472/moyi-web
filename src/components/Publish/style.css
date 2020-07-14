@@ -1,0 +1,35 @@
+.publish_box{
+    width: 15%;
+    position: absolute;
+    left: .35rem;
+    bottom: 2rem;
+}
+.same{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 2.17rem;
+    height: .64rem;
+    line-height: .64rem;
+    color: #ffffff;
+    border-radius: .05rem;
+    cursor: pointer;
+}
+
+.same img{
+    width: .25rem;
+    height: .25rem;
+    margin-top: .21rem;
+    margin-right: .07rem;
+}
+.same  p{
+    margin-left: .07rem;
+}
+.publish{
+    /* margin-top: 4rem; */
+    background:linear-gradient(270deg,rgba(127,236,255,1) 0%,rgba(40,94,233,1) 100%);
+}
+.purchase{
+    margin-top: .33rem;
+    background:linear-gradient(270deg,rgba(255,223,119,1) 0%,rgba(230,126,61,1) 100%);
+}
