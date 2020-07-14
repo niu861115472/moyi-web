@@ -1,15 +1,18 @@
-.tabs{
+.tabs {
     margin-top: .2rem;
     border-radius: 5px;
+    font-size: .19rem;
 }
-.tabs .el-tabs__nav-scroll{
+
+.tabs .el-tabs__nav-scroll {
     background: #ffffff;
 }
-.tabs .el-tabs__header{
+
+.tabs .el-tabs__header {
     margin-bottom: .1rem
 }
-.tabs .el-tabs__item{
-    /* padding: 0 .4rem; */
+
+.tabs .el-tabs__item {
     font-size: .21rem;
     width: 135px;
     height: .8rem;
@@ -17,12 +20,102 @@
     line-height: .8rem;
     color: #0D1D48;
 }
-.tabs .el-tabs__active-bar{
-}
-.tabs .el-tabs__item.is-active{
+
+.tabs .el-tabs__item.is-active {
     color: #20a0ff;
 }
-.tabs .el-tabs__content{
-    padding: .5rem;
+
+.tabs .el-tabs__content {
+    padding: .5rem .7rem;
     background: #ffffff;
+}
+
+.tabs .distribute {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.tabs .base_info .service {
+    justify-content: space-between;
+}
+
+.tabs .base_info .distribute img {
+    margin-left: 1.84rem;
+}
+
+.tabs .input {
+    border-radius: 5px;
+    margin-top: .2rem;
+    padding-left: .1rem;
+    font-size: .19rem;
+}
+
+.tabs .distribute input {
+    width: 5.93rem;
+    height: .6rem;
+    border: 1px solid #285ee9;
+}
+
+.tabs .base_info .service div:nth-of-type(2) input {
+    border: 1px solid #efefef;
+}
+
+.tabs .base_info .textarea .el-textarea__inner {
+    margin: .2rem 0;
+    padding: .1rem .12rem;
+    font-size: .19rem;
+}
+
+.tabs .base_info .save_btn {
+    width: 1.33rem;
+    height: .60rem;
+    line-height: .6rem;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    font-size: .21rem;
+    background: #285ee9;
+    border-radius: 5px;
+}
+
+.tabs .ios_version .distribute .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: .96rem;
+    height: .43rem;
+    margin-left: .53rem;
+    color: #ffffff;
+    background: #285ee9;
+    border-radius: 5px;
+}
+.tabs .ios_version .distribute_1{
+    display: flex;
+    align-items: center;
+    margin-top: .8rem;
+}
+.tabs .ios_version .distribute .btn:nth-of-type(2) {
+    background: #1CD4DE;
+}
+
+.tabs .ios_version .distribute .btn:nth-of-type(1) img {
+    width: .19rem;
+    height: .16rem;
+}
+
+.tabs .ios_version .distribute .btn:nth-of-type(2) img {
+    width: .23rem;
+    height: .2rem;
+}
+
+.tabs .ios_version .distribute_address input {
+    width: 9.11rem;
+    height: .6rem;
+    border-radius: 5px;
+    background: #fbfcff;
+    border: 1px solid #efefef;
+}
+.tabs .ios_version .distribute_1 .public_p{
+    margin-left: .67rem;
 }

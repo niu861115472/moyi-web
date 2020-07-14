@@ -5,37 +5,37 @@ function BaseInfo() {
 
     return (
         <div className="base_info">
-            <div>
+            <div className="distribute">
                 <p>分发图标</p>
                 <img className="icon" src={require('../../../assets/images/a.jpg')} alt="" />
             </div>
-            <div>
+            <div className="service distribute">
                 <div>
                     <p>服务商/公司</p>
-                    <input type="text" />
+                    <input className="input" type="text" placeholder="暂无" />
                 </div>
                 <div>
                     <p>类别</p>
-                    <input type="text" />
+                    <input className="input" type="text" placeholder="暂无" />
                 </div>
             </div>
-            <div>
+            <div className="textarea">
                 <p>版本描述</p>
                 <Input
                     type="textarea"
-                    autosize={{ minRows: 2, maxRows: 4 }}
+                    rows={8}
                     placeholder="暂无"
                 />
             </div>
-            <div>
+            <div className="textarea">
             <p>应用描述</p>
                 <Input
                     type="textarea"
-                    autosize={{ minRows: 2, maxRows: 4 }}
+                    rows={8}
                     placeholder="暂无"
                 />
             </div>
-            <div>保存</div>
+            <div className="save_btn">保存</div>
         </div>
     )
 }
