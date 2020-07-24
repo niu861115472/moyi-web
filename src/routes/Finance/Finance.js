@@ -1,9 +1,13 @@
 import React from 'react';
+import FinanceInfo from './financeInfo/FinanceInfo'
+import './style.css'
 
 function Finance(){
 
     return (
-        <div className="apply_list">3333333333</div>
+        <div className="finance">
+            <FinanceInfo />
+        </div>
     )
 }
 

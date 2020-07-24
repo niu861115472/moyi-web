@@ -1,0 +1,22 @@
+.pagination .el-pagination{
+    width: 8rem;
+    margin: .4rem auto;
+}
+.pagination .el-pagination .el-pager li,
+.pagination .el-pagination .btn-prev,
+.pagination .el-pagination .btn-next{
+    /* padding: 0 .rem; */
+    min-width:.45rem;
+    height: .42rem;
+    line-height:.42rem;
+    margin: 0 .05rem;
+    font-size: .19rem;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+}
+.pagination .el-pagination .btn-prev,
+.pagination .el-pagination .btn-next{
+    padding: 0 .08rem;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+}

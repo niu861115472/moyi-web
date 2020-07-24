@@ -7,22 +7,6 @@
     margin-bottom: .47rem;
 }
 
-.product .account_data .account_title {
-    position: relative;
-    padding-left: .2rem;
-    margin-bottom: .33rem;
-}
-
-.product .account_data .account_title::before {
-    content: "";
-    width: .05rem;
-    height: .2rem;
-    position: absolute;
-    left: 0;
-    border-radius: .03rem;
-    background: linear-gradient(360deg, rgba(222, 231, 255, 1) 0%, rgba(40, 94, 233, 1) 100%);
-}
-
 .product .account_data .account_content {
     display: flex;
     justify-content: space-between;

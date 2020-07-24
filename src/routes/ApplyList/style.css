@@ -69,25 +69,3 @@
 .apply_index .el-tooltip__popper{
     font-size: .15rem;
 }
-.apply_index .apply_list .el-pagination{
-    width: 8rem;
-    margin: .4rem auto;
-}
-.apply_index .apply_list .el-pagination .el-pager li,
-.apply_index .apply_list .el-pagination .btn-prev,
-.apply_index .apply_list .el-pagination .btn-next{
-    /* padding: 0 .rem; */
-    min-width:.45rem;
-    height: .42rem;
-    line-height:.42rem;
-    margin: 0 .05rem;
-    font-size: .19rem;
-    border: 1px solid #f1f1f1;
-    border-radius: 4px;
-}
-.apply_index .apply_list .el-pagination .btn-prev,
-.apply_index .apply_list .el-pagination .btn-next{
-    padding: 0 .08rem;
-    border: 1px solid #f1f1f1;
-    border-radius: 4px;
-}

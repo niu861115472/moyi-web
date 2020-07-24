@@ -14,7 +14,7 @@
 
 .tabs .el-tabs__item {
     font-size: .21rem;
-    width: 135px;
+    width: 160px;
     height: .8rem;
     text-align: center;
     line-height: .8rem;
@@ -26,7 +26,7 @@
 }
 
 .tabs .el-tabs__content {
-    padding: .5rem .7rem;
+    padding: .4rem;
     background: #ffffff;
 }
 
@@ -47,7 +47,7 @@
 .tabs .input {
     border-radius: 5px;
     margin-top: .2rem;
-    padding-left: .1rem;
+    padding-left: .2rem;
     font-size: .19rem;
 }
 
@@ -79,7 +79,7 @@
     border-radius: 5px;
 }
 
-.tabs .ios_version .distribute .btn {
+.tabs .component_version .distribute .btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,33 +89,128 @@
     color: #ffffff;
     background: #285ee9;
     border-radius: 5px;
+    cursor: pointer;
 }
-.tabs .ios_version .distribute_1{
+
+.tabs .component_version .distribute_1 {
     display: flex;
     align-items: center;
     margin-top: .8rem;
 }
-.tabs .ios_version .distribute .btn:nth-of-type(2) {
+
+.tabs .component_version .distribute .btn:nth-of-type(2) {
     background: #1CD4DE;
 }
 
-.tabs .ios_version .distribute .btn:nth-of-type(1) img {
+.tabs .component_version .distribute .btn:nth-of-type(1) img {
     width: .19rem;
     height: .16rem;
 }
 
-.tabs .ios_version .distribute .btn:nth-of-type(2) img {
+.tabs .component_version .distribute .btn:nth-of-type(2) img {
     width: .23rem;
     height: .2rem;
 }
 
-.tabs .ios_version .distribute_address input {
+.tabs .component_version .distribute_address input {
     width: 9.11rem;
     height: .6rem;
     border-radius: 5px;
     background: #fbfcff;
     border: 1px solid #efefef;
 }
-.tabs .ios_version .distribute_1 .public_p{
+
+.tabs .component_version .distribute_1 .public, .tabs .component_version .distribute_1 .secret {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tabs .component_version .distribute_1 .public_p {
     margin-left: .67rem;
+    padding-bottom: .02rem;
+    color: #285ee9;
+    cursor: pointer;
+    border-bottom: 1px solid #285EE9;
+}
+
+.tabs .component_version .distribute_1 img {
+    width: .18rem;
+    height: .18rem;
+    margin-left: .67rem;
+    margin-right: 0.06rem;
+}
+
+.tabs .component_version .password_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tabs .component_version .password_box p {
+    width: .8rem;
+    padding: .02rem .03rem;
+    margin-left: .1rem;
+    text-align: center;
+    border: 1px solid #efefef;
+}
+
+.tabs .component_version .password_box img {
+    width: .2rem;
+    height: .2rem;
+    margin-left: .1rem;
+    cursor: pointer;
+}
+
+.tabs .down_record {
+    padding: 0 0 0.2rem 0 !important;
+}
+.tabs .flow_contro{
+    padding: 0 0.5rem;
+}
+.tabs .flow_contro .download_set {
+    margin-bottom: 1.43rem;
+    color: #919191;
+}
+
+.tabs .flow_contro .download_set p {
+    margin: .4rem 0;
+}
+
+.tabs .flow_contro .download_set ul {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabs .flow_contro .download_set ul li:nth-of-type(3) {
+    width: .87rem;
+    height: .44rem;
+    line-height: .44rem;
+    text-align: center;
+    background: #285ee9;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.tabs .flow_contro .download_set ul li input {
+    width: 1.6rem;
+    padding: 0.1rem;
+    margin-left: .33rem;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+}
+
+.tabs .flow_contro .download_set .el-checkbox__label {
+    font-size: .27rem;
+    padding-left: 0.1rem
+}
+.tabs .flow_contro .download_set .el-checkbox__inner{
+    top: -0.02rem;
+}
+.complete {
+    background: #285ee9;
+    border-color: #285ee9;
 }

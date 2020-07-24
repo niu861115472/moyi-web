@@ -1,6 +1,6 @@
 import React from 'react';
 import ListItem from './ListItem'
-import { Pagination } from 'element-react'
+import Pagination from '../../components/Pagination/Pagination'
 
 function ApplyList(props) {
 
@@ -29,7 +29,8 @@ function ApplyList(props) {
                     )
                 })
             }
-            <Pagination layout="prev, pager, next" total={500} />
+            {/* <Pagination layout="prev, pager, next" total={500} /> */}
+            <Pagination />
         </div>
     )
 }
