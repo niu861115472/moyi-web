@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
-const list = ['充值','消费','剩余','订单数']
+const list = [
+    { key: '充值', today: '+500', yesterday: '-600', this_week: '+2000', last_week: '-400', this_month: '+600', last_month: '+500' },
+    { key: '消费', today: '+500', yesterday: '-600', this_week: '+2000', last_week: '-400', this_month: '+600', last_month: '+500' },
+    { key: '剩余', today: '+500', yesterday: '-600', this_week: '+2000', last_week: '-400', this_month: '+600', last_month: '+500' },
+    { key: '订单', today: '+500', yesterday: '-600', this_week: '+2000', last_week: '-400', this_month: '+600', last_month: '+500' }
+]
 
 
 function ListComponent(props) {
@@ -17,7 +22,7 @@ function ListComponent(props) {
                 <p>{props.num}</p>
             </div>
             <div className="info_list">
-                <div>
+                <div className="date">
                     <ul>
                         <li>今日</li>
                         <li>昨日</li>
@@ -27,11 +32,23 @@ function ListComponent(props) {
                         <li>上月</li>
                     </ul>
                 </div>
-                <div>
+                <div className="data">
                     <ul>
                         {
-                            list.map((item,index) =>{
-
+                            list.map((item, index) => {
+                                return (
+                                    <li key={index}>
+                                        <p>{item.key}</p>
+                                        <div>
+                                            <p>{item.today}</p>
+                                            <p>{item.yesterday}</p>
+                                            <p>{item.this_week}</p>
+                                            <p>{item.last_week}</p>
+                                            <p>{item.this_month}</p>
+                                            <p>{item.last_month}</p>
+                                        </div>
+                                    </li>
+                                )
                             })
                         }
                     </ul>
