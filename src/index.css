@@ -1,17 +1,16 @@
-
 html, body, :global(#root) {
   height: 100%;
   font-size: .21rem;
   font-family: '黑体'
 }
- .account_data .account_title {
+
+.account_title {
   position: relative;
   padding-left: .2rem;
   margin-bottom: .33rem;
 }
 
- .account_data .account_title::before,
- .finance .customer_tab .el-tabs__item:nth-of-type(1)::before{
+.account_title::before, .finance .customer_tab .el-tabs__item:nth-of-type(1)::before {
   content: "";
   width: .05rem;
   height: .2rem;
@@ -21,3 +20,30 @@ html, body, :global(#root) {
   background: linear-gradient(360deg, rgba(222, 231, 255, 1) 0%, rgba(40, 94, 233, 1) 100%);
 }
 
+.detail_header .download_table {
+  border-radius: 5px;
+  border: 1px solid rgba(239, 239, 239, 1);
+}
+
+.detail_header .download_table p {
+  width: 33.3%;
+  text-align: center;
+}
+
+.detail_header .download_table .top, .detail_header .download_table .bottom {
+  display: flex;
+  justify-content: space-around;
+  height: .72rem;
+  line-height: .72rem;
+  background: #fbfcff;
+  color: #919191;
+}
+
+.detail_header .download_table .bottom {
+  background: #ffffff;
+}
+
+.detail_header .download_table .bottom p {
+  color: #0D1D48;
+  font-weight: 500;
+}

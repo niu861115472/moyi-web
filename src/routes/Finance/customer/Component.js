@@ -1,23 +1,55 @@
 import React, { Component } from 'react';
 
-function Component() {
-
+const CustomListItem = (props) => {
     return (
-        <div className="compoent">
+        <div className="bottom" style={{ borderBottom: "1px solid #f1f1f1" }}>
+            <p>{props.item.date}</p>
+            <p>{props.item.num}</p>
+            <p>{props.item.detail}</p>
+        </div>
+    )
+}
+
+const RechargeListItem = (props) => {
+    return (
+        <div className="bottom" style={{ borderBottom: "1px solid #f1f1f1" }}>
+            <p>{props.item.orderId}</p>
+            <p>{props.item.date}</p>
+            <p>{props.item.type}</p>
+            <p>{props.item.num}</p>
+            <p>{props.item.price}</p>
+            <p>{props.item.status}</p>
+        </div>
+    )
+}
+
+
+function TableComponent(props) {
+    const list = [1, 2, 3, 4]
+    return (
+        <div className="component detail_header">
             <div className="download_table">
                 <div className="top">
-                    <p>设备</p>
-                    <p>系统版本</p>
-                    <p>APP版本</p>
-                    <p>下载IP</p>
-                    <p>下载时间</p>
+                    {
+                        props.titles.map((item, index) => {
+                            return (
+                                <p key={item + index}>{item}</p>
+                            )
+                        })
+                    }
                 </div>
                 {
-                    list.map((item, index) => {
+                    props.list.map((item, index) => {
                         return (
-                            <ListItem
-                                key={index}
-                            />
+                            props.type == "1" ?
+                                <CustomListItem
+                                    key={index}
+                                    item={item}
+                                /> :
+                                <RechargeListItem
+                                    key={index}
+                                    item={item}
+                                />
                         )
                     })
                 }
@@ -26,4 +58,4 @@ function Component() {
     )
 }
 
-export default Component
+export default TableComponent

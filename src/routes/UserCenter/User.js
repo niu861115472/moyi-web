@@ -1,10 +1,18 @@
 import React from 'react';
+import RealName from './RealName'
+import PersonalData from './PersonalData'
+import ChangePas from './ChangePas'
+import './style.css'
 
-function User(){
+function UserCenter(){
 
     return (
-        <div className="apply_list">4444444444</div>
+        <div className="user_center">
+            <RealName />
+            <PersonalData />
+            <ChangePas />
+        </div>
     )
 }
 
-export default User
+export default UserCenter

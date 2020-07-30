@@ -57,31 +57,6 @@
     border-radius: 4px;
     cursor: pointer;
 }
-
-.list_detail .detail_header .download_table {   
-    border-radius: 5px;
-    border: 1px solid rgba(239, 239, 239, 1);
-}
-.list_detail .detail_header .download_table p{
-    width: 33.3%;
-    text-align: center;
-}
-.list_detail .detail_header .download_table .top,
-.list_detail .detail_header .download_table .bottom{
-    display: flex;
-    justify-content: space-around;
-    height: .72rem;
-    line-height: .72rem;
-    background:#fbfcff;
-    color: #919191;
-}
-.list_detail .detail_header .download_table .bottom{
-    background: #ffffff;
-}
-.list_detail .detail_header .download_table .bottom p{
-    color: #0D1D48;
-    font-weight:500;
-}
 .list_detail .detail_header .download_table .bottom p:nth-of-type(3) a{
     color: #285EE9;
 }

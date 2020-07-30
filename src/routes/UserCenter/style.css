@@ -1,0 +1,85 @@
+.user_center {
+    margin: 0.3rem;
+}
+
+.user_center .name_info {
+    padding: 0.53rem 0.25rem;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 13px 0px rgba(220, 220, 220, 0.5);
+    border-radius: 5px;
+    font-size: 0.16rem;
+    margin-bottom: 0.47rem;
+}
+
+.user_center .name_info div {
+    display: flex;
+    align-items: center;
+}
+
+.user_center .name_info .personal_item {
+    width: 50%;
+}
+
+.user_center .personal_data .name_info div {
+    justify-content: space-between;
+}
+
+.user_center .name_info .personal_item:not(:last-child) {
+    margin-bottom: 0.53rem;
+}
+
+.user_center .name_info div p:nth-of-type(2) {
+    width: 2.3rem;
+    margin-left: 2rem;
+    color: #919191;
+}
+
+.user_center .personal_data .name_info div p:nth-of-type(2) {
+    margin: 0;
+}
+
+.user_center .name_info p:nth-of-type(1) {
+    width: 1rem;
+}
+
+.user_center .name_info img {
+    width: 0.63rem;
+    height: 0.63rem;
+    margin-right: 1.7rem;
+}
+
+.user_center .name_info .personal_item button {
+    width: .59rem;
+    padding: 0.05rem 0;
+    text-align: center;
+    color: #9D9D9D;
+    font-size: 0.16rem;
+    border-radius: 5px;
+    border: 1px solid #e6e6e6;
+    cursor: pointer;
+    outline-style: none;
+}
+
+.change_pas .el-input__inner {
+    font-size: .19rem;
+    height: .55rem;
+    line-height: 55rem;
+}
+
+.change_pas .el-input__inner::placeholder {
+    font-size: .15rem;
+}
+
+.save_btn {
+    width: 1.33rem;
+    height: .6rem;
+    font-size: .18rem;
+    line-height: .6rem;
+    margin-left: 1rem;
+    text-align: center;
+    color: #ffffff;
+    background: #285ee9;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}

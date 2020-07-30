@@ -34,7 +34,7 @@ function ClientComponent(props) {
             </div>
             <div className="aside">
                 <div className="aside_list">
-                    <ul>
+                    <ul className="aside_ul">
                         {
                             list.map((item, index) => {
                                 return (

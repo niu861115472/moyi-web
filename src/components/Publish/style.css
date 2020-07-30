@@ -1,10 +1,11 @@
-.publish_box{
+.publish_box {
     width: 15%;
     position: absolute;
     left: .35rem;
-    bottom: 2rem;
+    bottom: 1rem;
 }
-.same{
+
+.same {
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -16,20 +17,91 @@
     cursor: pointer;
 }
 
-.same img{
+.same img {
     width: .25rem;
     height: .25rem;
     margin-top: .21rem;
     margin-right: .07rem;
 }
-.same  p{
+
+.same p {
     margin-left: .07rem;
 }
-.publish{
+
+.publish {
     /* margin-top: 4rem; */
-    background:linear-gradient(270deg,rgba(127,236,255,1) 0%,rgba(40,94,233,1) 100%);
+    background: linear-gradient(270deg, rgba(127, 236, 255, 1) 0%, rgba(40, 94, 233, 1) 100%);
 }
-.purchase{
+
+.purchase {
     margin-top: .33rem;
-    background:linear-gradient(270deg,rgba(255,223,119,1) 0%,rgba(230,126,61,1) 100%);
+    background: linear-gradient(270deg, rgba(255, 223, 119, 1) 0%, rgba(230, 126, 61, 1) 100%);
+}
+
+.buy_device .el-tabs__nav {
+    width: 100%;
+}
+
+.buy_device .el-tabs__item {
+    width: 50%;
+}
+
+.buy_device .el-tabs__content {
+    margin-top: .3rem;
+    padding: 0;
+}
+.buy_device .device_item ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buy_device .device_item ul li {
+    width: 2.2rem;
+    padding: .4rem 0;
+    border-radius: 5px;
+    border: 1px solid #e6e6e6;
+    cursor: pointer;
+    text-align: center;
+}
+.buy_device .device_item ul li p:not(:last-child){
+    margin-bottom: 0.13rem;
+}
+.buy_device .device_item ul li p:nth-of-type(1){
+    font-size: .24rem;
+    color: #0D1D48;
+}
+.buy_device .device_item ul li p:nth-of-type(2){
+    color: #EB764D;
+}
+.buy_device .device_item ul li p:nth-of-type(2) span:nth-of-type(2){
+    font-size: 0.53rem;
+}
+.buy_device .device_item ul li p:nth-of-type(3){
+    text-decoration: line-through;
+    font-size: .16rem;
+    color: #9D9D9D;
+}
+.buy_device .device_item ul li.currentStyle{
+    border:1px solid #2e61e7;
+}
+.el-dialog--tiny {
+    top: 33% !important;
+    padding: 0.1rem 0.3rem;
+}
+
+.buy_device .el-dialog--tiny {
+    width: 80%;
+}
+
+.el-upload {
+    width: 100%;
+}
+
+.el-dialog {
+    background-color: #ffffff;
+    z-index: 999;
+}
+
+.el-upload-dragger {
+    width: 100%;
 }
