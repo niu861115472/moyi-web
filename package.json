@@ -7,6 +7,9 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "app-info-parser": "^0.3.11",
+    "axios": "^0.19.2",
+    "cos-js-sdk-v5": "^0.5.27",
     "dva": "^2.4.1",
     "element-react": "^1.4.34",
     "element-theme-default": "^1.4.13",

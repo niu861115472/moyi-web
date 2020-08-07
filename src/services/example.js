@@ -1,15 +1,12 @@
-import request from '../utils/request';
+import $axios from '../utils/index'
 
-const pox = "/apis"
+console.log($axios)
 
-export function query() {
-  return request('/api/users');
+let apis = {
+    login: `${$axios.baseUrl1}//api/v1.Index/login`,
+    uploadIpa: `${$axios.baseUrl1}/api/v1.Upload/uploadIpa`
 }
 
-export function testCnode() {
-  return request(pox+'/api/v1/topics');
-}
+export const getLogin = (data) => { return $axios.post(apis.login, data).then(res => res) }
 
-export function mockData() {
-  return request('api/mockdata');
-}
+export const getUploadIpa = (data) => { return $axios.post(apis.uploadIpa, data).then(res => res) }

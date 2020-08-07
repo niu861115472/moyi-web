@@ -1,4 +1,4 @@
-import * as apis from '../services/example'
+// import * as apis from '../services/example'
 
 export default {
     namespace:'indexTest',
@@ -34,17 +34,16 @@ export default {
                 }
             })
         },
-        *testCode({payLoad},{put,call}){
-           let rel = yield call(apis.testCnode)
-           if(rel.data){
-               console.log(rel.data.data)
-               yield put({
-                   type:'setCnodeDataList',
-                   data:rel.data.data
-               })
-           }
-           
-        }
+        // *testCode({payLoad},{put,call}){
+        //    let rel = yield call(apis.testCnode)
+        //    if(rel.data){
+        //        console.log(rel.data.data)
+        //        yield put({
+        //            type:'setCnodeDataList',
+        //            data:rel.data.data
+        //        })
+        //    }
+        // }
     },
     subscriptions:{
         haha({dispatch,history}){
