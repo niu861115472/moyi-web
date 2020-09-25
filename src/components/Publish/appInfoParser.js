@@ -1,16 +1,29 @@
 import { getUploadIpa, getLogin } from '../../services/example'
 import { Message } from 'element-react'
 import axios from 'axios'
+<<<<<<< HEAD
 
 let app_url, icon_url = ''
 const AppInfoParser = require('app-info-parser')
+=======
+// import ApkParser from 'app-info-parser/src/apk'
+
+let app_url, icon_url = ''
+const AppInfoParser = require('app-info-parser')
+// const ApkParser = require('app-info-parser')
+// const IpaParser = require('app-info-parser')
+>>>>>>> 9-25 update
 const COS = require('cos-js-sdk-v5')
 
 export function uploadBefore(file) {
     var ipa = file.name;
     var num = file.size / 1024 / 1024;
     console.log('上传前')
+<<<<<<< HEAD
     if (ipa.indexOf('ipa') == -1) {
+=======
+    if (ipa.indexOf('ipa') == -1 && ipa.indexOf('apk') == -1) {
+>>>>>>> 9-25 update
         alert('请上传正确的ipa包！');
         return false;
     }
@@ -22,6 +35,7 @@ export function uploadBefore(file) {
 }
 
 //解析包
+<<<<<<< HEAD
 export function AppInfoParser1(file, uploader) {
     // console.log(file)
     new AppInfoParser(file).parse().then(result => {
@@ -37,6 +51,42 @@ export function AppInfoParser1(file, uploader) {
             file.size,
             uploader
         )
+=======
+export function AppInfoParser1(file, uploader, operation_type, key) {
+    var name = file.name
+    new AppInfoParser(file).parse().then(result => {
+        console.log('app info ----> ', result)
+        var img_file = dataURLtoFile(result.icon)
+        if (name.indexOf('ipa') > -1) {
+            uploadTencent(
+                file,
+                img_file,
+                operation_type,
+                'ios',
+                key,
+                result.CFBundleDisplayName || result.CFBundleName,
+                result.CFBundleShortVersionString,
+                result.MinimumOSVersion,
+                result.CFBundleIdentifier,
+                file.size,
+                uploader
+            )
+        } else {
+            uploadTencent(
+                file,
+                img_file,
+                operation_type,
+                'android',
+                key,
+                result.application.label,
+                result.versionName,
+                result.usesSdk.minSdkVersion,
+                result.package,
+                file.size,
+                uploader
+            )
+        }
+>>>>>>> 9-25 update
     }).catch(err => {
         console.log('err ----> ', err)
     })
@@ -44,6 +94,7 @@ export function AppInfoParser1(file, uploader) {
 }
 
 //上传至腾讯云拿到地址
+<<<<<<< HEAD
 function uploadTencent(file, img_file, name, version, build, bundle, size, uploader) {
     //腾讯云存储的 名称 和 地区。写死就好
     var Bucket = 'package-1300474322';
@@ -55,6 +106,13 @@ function uploadTencent(file, img_file, name, version, build, bundle, size, uploa
     //     login_token = res.data.token
     //     console.log(res)
     //     console.log(login_token)
+=======
+function uploadTencent(file, img_file, operation_type, app_type, key, name, version, build, bundle, size, uploader) {
+    //腾讯云存储的 名称 和 地区。写死就好
+    var Bucket = 'package-1300474322';
+    var Region = 'ap-shanghai';
+
+>>>>>>> 9-25 update
     // 初始化实例
     var cos = new COS({
         getAuthorization: function (options, callback) {
@@ -65,7 +123,11 @@ function uploadTencent(file, img_file, name, version, build, bundle, size, uploa
             var xhr = new XMLHttpRequest();
             xhr.open('GET', url, true);
             //这是身份验证的token ，从登陆接口获取
+<<<<<<< HEAD
             var login_token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6IjRmMWcyM2ExMmFhIn0.eyJpc3MiOiIiLCJhdWQiOiIiLCJqdGkiOiI0ZjFnMjNhMTJhYSIsImlhdCI6MTU5Njc4NDc1MiwibmJmIjoxNTk2Nzg0NzUyLCJleHAiOjE1OTY4NzExNTIsInVzZXJfaWQiOjF9.fjgF_kxvd-XSairJMqMouv8h5AjqUYiNNAqG-Yh7Bek'
+=======
+            var login_token = localStorage.getItem('token')
+>>>>>>> 9-25 update
             xhr.setRequestHeader('Authorization', login_token);
             xhr.onload = function (e) {
                 try {
@@ -73,7 +135,11 @@ function uploadTencent(file, img_file, name, version, build, bundle, size, uploa
                     var credentials = data.credentials;
                 } catch (e) {
                 }
+<<<<<<< HEAD
                 if (!data || !credentials) return console.error('credentials invalid');
+=======
+                if (!data || !credentials) return Message(data.msg);
+>>>>>>> 9-25 update
                 callback({
                     //这里是上面 注释中的返回结果 的使用
                     TmpSecretId: credentials.tmpSecretId,
@@ -118,7 +184,13 @@ function uploadTencent(file, img_file, name, version, build, bundle, size, uploa
             icon_url = data.Location
 
             let form = new FormData();
+<<<<<<< HEAD
             form.append('app_id', ''),
+=======
+            form.append('operation_type', operation_type),
+                form.append('app_type', app_type),
+                form.append('key', key),
+>>>>>>> 9-25 update
                 form.append('url', app_url),
                 form.append('name', name),
                 form.append('version', version),
@@ -136,6 +208,7 @@ function uploadTencent(file, img_file, name, version, build, bundle, size, uploa
                             progressEvent.loaded / progressEvent.total * 100)
                     ).toFixed(0)
                     //调用onProgress方法来显示进度条，需要传递个对象 percent为进度值
+<<<<<<< HEAD
                     console.log(percent, uploader)
                     uploader.onProgress({percent:percent})
                 }
@@ -145,6 +218,18 @@ function uploadTencent(file, img_file, name, version, build, bundle, size, uploa
                 //处理自己的逻辑
                 // console.log(res)
                 uploader.onSuccess()
+=======
+                    uploader.onProgress({ percent: percent })
+                }
+            }).then((res) => {
+                //上传成功 调用onSuccess方法，否则没有完成图标
+                if (res.code == 200) {
+                    Message({ message: '上传成功！', type: 'success' })
+                    uploader.onSuccess({ operation_type, app_type })
+                } else {
+                    Message(res.msg)
+                }
+>>>>>>> 9-25 update
             }).catch((err) => {
                 //上传失败 调用onError方法
                 //处理自己的逻辑

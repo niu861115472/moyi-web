@@ -16,8 +16,12 @@
     margin-bottom: .4rem;
 }
 
+<<<<<<< HEAD
 .list_detail .detail_header .data_statis .left img,
 .icon {
+=======
+.list_detail .detail_header .data_statis .left img, .icon {
+>>>>>>> 9-25 update
     position: relative;
     top: 0.01rem;
     width: .72rem;
@@ -57,6 +61,70 @@
     border-radius: 4px;
     cursor: pointer;
 }
+<<<<<<< HEAD
 .list_detail .detail_header .download_table .bottom p:nth-of-type(3) a{
     color: #285EE9;
+=======
+
+.list_detail .detail_header .download_table .qrcode {
+    width: 33.3%;
+}
+
+.list_detail .detail_header .download_table .bottom p:nth-of-type(3) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.list_detail .detail_header .download_table .bottom p:nth-of-type(3) a {
+    color: #285EE9
+}
+
+.tabs .upload_comp {
+    position: relative;
+    text-align: center;
+}
+
+.tabs .upload_comp div:nth-of-type(1) {
+    width: 5.05rem;
+    height: 2.77rem;
+    margin: 0.66rem auto 0.37rem auto
+}
+
+.tabs .upload_comp p {
+    color: #919191
+}
+
+.tabs .upload_comp div:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    width: 2.17rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    margin: 0.66rem auto;
+    background: #285EE9;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tabs .upload_comp div:nth-of-type(2) img {
+    width: 0.3rem;
+    height: 0.28rem;
+    align-self: center;
+    margin-right: 0.06rem;
+}
+
+.tabs .upload_comp div:nth-of-type(2) span {
+    margin-left: 0.06rem;
+}
+
+.list_detail .close_update {
+    position: absolute;
+    top: -0.6rem;
+    right: 0;
+    font-size: 0.5rem;
+    color: #6b6868;
+    cursor: pointer;
+>>>>>>> 9-25 update
 }

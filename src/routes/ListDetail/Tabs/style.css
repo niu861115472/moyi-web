@@ -210,7 +210,22 @@
 .tabs .flow_contro .download_set .el-checkbox__inner{
     top: -0.02rem;
 }
+<<<<<<< HEAD
 .complete {
     background: #285ee9;
     border-color: #285ee9;
+=======
+.no_records{
+    width: 100%;
+    margin: .5rem 0;
+    color: #919191;
+    text-align: center;
+}
+.complete {
+    background: #285ee9;
+    border-color: #285ee9;
+}
+.update_current{
+    display: none;
+>>>>>>> 9-25 update
 }

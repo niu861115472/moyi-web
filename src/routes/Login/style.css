@@ -1,11 +1,19 @@
 .login {
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     background-image: url('../../assets/images/login/背景插图.png');
+=======
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/images/login/背景.png');
+>>>>>>> 9-25 update
     background-size: 100% 100%;
 }
 
 .login_form, .register_form {
+<<<<<<< HEAD
     width: 5.93rem;
     position: relative;
     left: 9.53rem;
@@ -25,6 +33,40 @@
     width: 100%;
     background: #ffffff;
     box-shadow: 3px 4px 25px 3px #dcdcdc80;
+=======
+    width: 13.95rem;
+    height: 8.13rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 1px 8px 13px 0px rgba(42, 54, 108, 0.23);
+    border-radius: 40px;
+}
+
+.login_form .login_img {
+    width: 5.49rem;
+    height: 5.49rem;
+}
+
+.register_form {
+    top: 1rem;
+}
+
+.login_form .welcome {
+    text-align: center;
+    font-size: .3rem;
+    color: #0D1D48;
+    margin-bottom: .8rem;
+}
+
+.register_form .welcome {
+    margin-top: .5rem;
+}
+
+.form_box {
+    flex: 1;
+>>>>>>> 9-25 update
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     text-align: center;
@@ -41,10 +83,18 @@
 }
 
 .user_name {
+<<<<<<< HEAD
     width: 4.65rem
 }
 .code{
     width: 3.96rem;
+=======
+    width: 4rem
+}
+
+.code {
+    width: 3.3rem;
+>>>>>>> 9-25 update
     margin-right: .3rem;
 }
 
@@ -58,11 +108,19 @@
 }
 
 .login_btn {
+<<<<<<< HEAD
     width: 4.65rem;
     height: .53rem;
     line-height: .53rem;
     margin: .4rem auto .2rem auto;
     background: rgba(46, 97, 231, 1);
+=======
+    width: 4rem;
+    height: .53rem;
+    line-height: .53rem;
+    margin: .4rem auto .2rem auto;
+    background: #2e61e7;
+>>>>>>> 9-25 update
     border-radius: 5px;
     font-size: .19rem;
     text-align: center;
@@ -70,6 +128,7 @@
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .form_box .el-form {
     margin-top: .84rem;
 }
@@ -78,6 +137,8 @@
     margin-bottom: .3rem;
 }
 
+=======
+>>>>>>> 9-25 update
 .form_box .el-form-item__error {
     left: .64rem;
     font-size: .14rem;
@@ -89,7 +150,10 @@
 
 .remeber {
     float: right;
+<<<<<<< HEAD
     margin-right: .64rem;
+=======
+>>>>>>> 9-25 update
     display: flex
 }
 
@@ -98,7 +162,11 @@
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .remeber a:nth-of-type(1) p{
+=======
+.remeber a:nth-of-type(1) p {
+>>>>>>> 9-25 update
     color: #919191;
 }
 
@@ -109,6 +177,7 @@
     background: #919191;
 }
 
+<<<<<<< HEAD
 .remeber a:nth-of-type(2) p{
     color: #2E61E7;
 }
@@ -116,4 +185,27 @@
     font-size: .19rem;
     color: #2E61E7;
     cursor: pointer;
+=======
+.remeber a:nth-of-type(2) p {
+    color: #2E61E7;
+}
+
+.send_code {
+    font-size: .19rem;
+    color: #2E61E7;
+    cursor: pointer;
+}
+
+.rember_pass {
+    position: relative;
+    width: 1rem;
+    top: 0.2rem;
+    font-size: 0.18rem;
+    text-align: left;
+}
+
+.rember_pass .el-checkbox__label {
+    font-size: 0.18rem;
+    padding-left: 0.1rem
+>>>>>>> 9-25 update
 }

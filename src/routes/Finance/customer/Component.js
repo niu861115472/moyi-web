@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
+=======
+import React from 'react';
+>>>>>>> 9-25 update
 
 const CustomListItem = (props) => {
     return (
         <div className="bottom" style={{ borderBottom: "1px solid #f1f1f1" }}>
+<<<<<<< HEAD
             <p>{props.item.date}</p>
             <p>{props.item.num}</p>
             <p>{props.item.detail}</p>
+=======
+            <p>{props.item.create_time_fmt}</p>
+            <p>{props.item.num}</p>
+            <p>{props.item.mark}</p>
+>>>>>>> 9-25 update
         </div>
     )
 }
@@ -13,12 +23,21 @@ const CustomListItem = (props) => {
 const RechargeListItem = (props) => {
     return (
         <div className="bottom" style={{ borderBottom: "1px solid #f1f1f1" }}>
+<<<<<<< HEAD
             <p>{props.item.orderId}</p>
             <p>{props.item.date}</p>
             <p>{props.item.type}</p>
             <p>{props.item.num}</p>
             <p>{props.item.price}</p>
             <p>{props.item.status}</p>
+=======
+            <p>{props.item.order_sn}</p>
+            <p>{props.item.create_time_fmt}</p>
+            <p>{props.item.type}</p>
+            <p>{props.item.num}</p>
+            <p>{props.item.pay_amount}</p>
+            <p>{props.item.order_status}</p>
+>>>>>>> 9-25 update
         </div>
     )
 }

@@ -1,6 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { Input, Form, Loading, Message } from 'element-react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom'
+=======
+import { Link, withRouter } from 'dva/router'
+import { connect } from 'dva'
+>>>>>>> 9-25 update
 
 const RemeberPass = () => {
     return (
@@ -9,7 +14,11 @@ const RemeberPass = () => {
                 <p>忘记密码</p>
             </Link>
             <div></div>
+<<<<<<< HEAD
             <Link to="/">
+=======
+            <Link to="/login">
+>>>>>>> 9-25 update
                 <p>登录</p>
             </Link>
         </div>
@@ -64,10 +73,17 @@ function LoginForm(props) {
                 validator: (rule, value, callback) => {
                     if (value === '') {
                         callback(new Error('请再次输入密码'));
+<<<<<<< HEAD
                     } 
                     else if (value !== form.pass) {
                         callback(new Error('两次输入密码不一致!'));
                     } 
+=======
+                    }
+                    else if (value !== form.pass) {
+                        callback(new Error('两次输入密码不一致!'));
+                    }
+>>>>>>> 9-25 update
                     else {
                         callback();
                     }
@@ -109,12 +125,31 @@ function LoginForm(props) {
         register.current.validate((valid) => {
             console.log(valid)
             if (valid) {
+<<<<<<< HEAD
                 clearTimeout(timeout)
                 let timeout = setTimeout(() => {
                     setFull(false)
                 }, 3000)
 
                 setFull(true)
+=======
+                setFull(true)
+                props.dispatch({
+                    type: 'register/registerAsync',
+                    payload: {
+                        username: form.name,
+                        password: form.pass,
+                        confirm_password: form.checkPass,
+                        mobile: form.telephone,
+                        verify_code: '111111'
+                    }
+                }).then(res => {
+                    if (res.code == 200) {
+                        props.history.push('/login')
+                    }
+                })
+
+>>>>>>> 9-25 update
                 console.log('submit!!')
             } else {
                 console.log('error submit!!')
@@ -148,10 +183,19 @@ function LoginForm(props) {
     return (
 
         <div className="register_form login_form">
+<<<<<<< HEAD
             <p>魔骥注册</p>
             <Loading loading={fullscreen}>
                 <div className="form_box">
                     <div className="linear_color"></div>
+=======
+            <div className="login_img">
+                <img src={require("../../assets/images/login/左侧插图.png")} alt="" />
+            </div>
+            <Loading loading={fullscreen}>
+                <p className="welcome">欢迎注册疾风内测平台</p>
+                <div className="form_box">
+>>>>>>> 9-25 update
                     <Form ref={register} model={form} rules={rules}>
                         <Form.Item prop="name">
                             <Input
@@ -206,4 +250,14 @@ function LoginForm(props) {
     )
 }
 
+<<<<<<< HEAD
 export default LoginForm
+=======
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {
+    }
+}
+
+export default withRouter(connect(mapStateToProps)(LoginForm))
+>>>>>>> 9-25 update

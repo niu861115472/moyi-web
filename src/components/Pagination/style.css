@@ -1,6 +1,10 @@
 .pagination .el-pagination{
     width: 8rem;
+<<<<<<< HEAD
     margin: .4rem auto;
+=======
+    margin: .2rem auto;
+>>>>>>> 9-25 update
 }
 .pagination .el-pagination .el-pager li,
 .pagination .el-pagination .btn-prev,

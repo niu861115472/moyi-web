@@ -5,6 +5,7 @@ import BuyDevice from './BuyDevice'
 import './style.css'
 
 function Publish(props) {
+<<<<<<< HEAD
     const handlePublish = () => {
         props.dispatch({
             type: 'uploadModel/changeVisible',
@@ -13,6 +14,20 @@ function Publish(props) {
     }
     const handlePurchase = () => {
         props.dispatch({
+=======
+    const { dispatch, buyVisible } = props
+    const handlePublish = () => {
+        dispatch({
+            type: 'uploadModel/changeVisible',
+            visible: true,
+            operation_type:"new",
+            app_key:null,
+            file_type:".ipa,.apk"
+        })
+    }
+    const handlePurchase = () => {
+        dispatch({
+>>>>>>> 9-25 update
             type: 'uploadModel/changeVisible',
             buyVisible: true
         })
@@ -28,15 +43,27 @@ function Publish(props) {
                 <img src={require('../../assets/images/apply_list/购买@2x.png')} alt="" />
                 <p>购买</p>
             </div>
+<<<<<<< HEAD
             <BuyDevice />
+=======
+            {
+                buyVisible ? <BuyDevice /> : null
+            }
+>>>>>>> 9-25 update
         </div>
     )
 }
 
 const mapStateToProps = (state) => {
+<<<<<<< HEAD
     console.log(state)
     return {
         visible: state.uploadModel.visible
+=======
+    return {
+        visible: state.uploadModel.visible,
+        buyVisible: state.uploadModel.buyVisible
+>>>>>>> 9-25 update
     }
 }
 

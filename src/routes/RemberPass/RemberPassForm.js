@@ -9,7 +9,11 @@ const RemeberPass = () => {
                 <p>注册</p>
             </Link>
             <div></div>
+<<<<<<< HEAD
             <Link to="/">
+=======
+            <Link to="/login">
+>>>>>>> 9-25 update
                 <p>登录</p>
             </Link>
         </div>
